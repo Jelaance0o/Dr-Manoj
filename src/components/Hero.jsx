@@ -300,7 +300,7 @@ const ConsultantCard = ({ innerRef, className = "" }) => {
         <a
           href={`tel:${clinicInfo.phoneRaw}`}
           className="
-            mt-3
+            mt-3per
             flex
             w-full
             items-center
@@ -528,7 +528,6 @@ useLayoutEffect(() => {
         lg:pb-24
       "
     >
-
       {/* Background decoration */}
       <div
         className="
@@ -558,9 +557,7 @@ useLayoutEffect(() => {
         "
       />
 
-
       <div className="container-px relative">
-
         {/* Hero content */}
         <div
           className="
@@ -574,10 +571,8 @@ useLayoutEffect(() => {
             lg:gap-14
           "
         >
-
           {/* Text */}
           <div className="min-w-0">
-
             <span
               className="
                 hero-badge
@@ -598,7 +593,6 @@ useLayoutEffect(() => {
                 sm:text-xs
               "
             >
-
               <ShieldIcon
                 className="
                   h-3.5
@@ -609,11 +603,9 @@ useLayoutEffect(() => {
               />
 
               <span className="leading-tight">
-                Pure Classical Homeopathy • Gentle &amp; Long-Lasting Cure
+                Pure Classical Homeopathy • Gentle &amp; Permanent Cure
               </span>
-
             </span>
-
 
             {/* Heading */}
             <h1
@@ -629,7 +621,6 @@ useLayoutEffect(() => {
                 lg:leading-[1.08]
               "
             >
-
               <span className="hero-heading-line block">
                 Root-Cause Healing
               </span>
@@ -638,12 +629,8 @@ useLayoutEffect(() => {
                 for Chronic &amp; Recurrent
               </span>
 
-              <span className="hero-heading-line block">
-                Ailments.
-              </span>
-
+              <span className="hero-heading-line block">Ailments.</span>
             </h1>
-
 
             {/* Description */}
             <p
@@ -660,24 +647,18 @@ useLayoutEffect(() => {
               "
             >
               Welcome to the trusted practice of{" "}
-              <strong className="text-ink">
-                {clinicInfo.doctorName}
-              </strong>{" "}
-              in Badi Sarwan, Ratlam. Offering individualized, gentle,
-              and constitutional therapies for lasting relief without
-              harmful side effects.
+              <strong className="text-ink">{clinicInfo.doctorName}</strong> in
+              Badi Sarwan, Ratlam. Offering individualized, gentle, and
+              constitutional therapies for lasting relief without harmful side
+              effects.
             </p>
-
           </div>
-
 
           {/* Doctor photo */}
           <div className="flex flex-col items-center gap-4">
             <DoctorPhoto />
           </div>
-
         </div>
-
 
         {/* Consultant card */}
         <div
@@ -689,19 +670,10 @@ useLayoutEffect(() => {
             lg:gap-14
           "
         >
+          <div className="hidden lg:block" aria-hidden="true" />
 
-          <div
-            className="hidden lg:block"
-            aria-hidden="true"
-          />
-
-          <ConsultantCard
-            innerRef={cardRef}
-            className="w-full"
-          />
-
+          <ConsultantCard innerRef={cardRef} className="w-full" />
         </div>
-
 
         {/* CTA */}
         <div
@@ -714,18 +686,15 @@ useLayoutEffect(() => {
             lg:max-w-xl
           "
         >
-
           <Button
             as="a"
             href="#booking"
             variant="primary"
             icon={<CalendarIcon className="h-4 w-4" />}
             className="hero-cta "
-            
           >
             Book Doctor Consultation
           </Button>
-
 
           <Button
             as="a"
@@ -738,9 +707,7 @@ useLayoutEffect(() => {
           >
             Instant WhatsApp Chat
           </Button>
-
         </div>
-
 
         {/* Trust points */}
         <ul
@@ -754,22 +721,14 @@ useLayoutEffect(() => {
             text-ink-soft
           "
         >
-
           {heroTrustPoints.map((point) => (
-            <li
-              key={point}
-              className="hero-trust flex items-center gap-1.5"
-            >
-
+            <li key={point} className="hero-trust flex items-center gap-1.5">
               <CheckIcon className="h-3.5 w-3.5 text-primary" />
 
               {point}
-
             </li>
           ))}
-
         </ul>
-
       </div>
     </section>
   );
