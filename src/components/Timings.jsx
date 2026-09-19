@@ -34,22 +34,30 @@ const Timings = () => {
               Clinic Timings &amp; Consultation Hours
             </h2>
             <p className="mt-4 max-w-lg text-ink-soft">
-              {clinicInfo.doctorName} is available for in-clinic checkups six days a week at Badi Sarwan. Please
-              note our morning and evening session slots below:
+              {clinicInfo.doctorName} is available for in-clinic checkups six
+              days a week at Badi Sarwan. Please note our morning and evening
+              session slots below:
             </p>
           </div>
 
-          <div ref={scheduleRef} className="mt-6 overflow-hidden rounded-2xl border border-border bg-paper">
+          <div
+            ref={scheduleRef}
+            className="mt-6 overflow-hidden rounded-2xl border border-border bg-paper"
+          >
             {clinicSchedule.map((row, i) => (
               <div
                 key={row.day}
-                style={{ transitionDelay: scheduleVisible ? `${i * 90}ms` : "0ms" }}
+                style={{
+                  transitionDelay: scheduleVisible ? `${i * 90}ms` : "0ms",
+                }}
                 className={`flex flex-col gap-2 px-6 py-4 sm:flex-row sm:items-center sm:justify-between ${reveal(
-                  scheduleVisible
+                  scheduleVisible,
                 )} ${i !== clinicSchedule.length - 1 ? "border-b border-border" : ""}`}
               >
                 <span className="flex items-center gap-2.5 font-medium text-primary-dark">
-                  <span className={`h-2 w-2 rounded-full ${statusDot[row.status]}`} />
+                  <span
+                    className={`h-2 w-2 rounded-full ${statusDot[row.status]}`}
+                  />
                   {row.day}
                 </span>
                 <div className="text-right">
@@ -58,17 +66,25 @@ const Timings = () => {
                       {slot}
                     </div>
                   ))}
-                  {row.note && <div className="text-xs font-medium text-amber-600">{row.note}</div>}
+                  {row.note && (
+                    <div className="text-xs font-medium text-amber-600">
+                      {row.note}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
           </div>
 
-          <div className={`mt-4 flex gap-3 rounded-xl bg-primary/5 p-4 ${reveal(scheduleVisible)}`}>
+          <div
+            className={`mt-4 flex gap-3 rounded-xl bg-primary/5 p-4 ${reveal(scheduleVisible)}`}
+          >
             <BellIcon className="h-4 w-4 flex-shrink-0 text-primary-dark mt-0.5" />
             <p className="text-sm text-ink-soft">
-              <strong className="text-primary-dark">Tip:</strong> Patients traveling from afar (Sailana, Bajna,
-              Jaora, or Ratlam City) are recommended to call or WhatsApp in advance to confirm queue availability.
+              <strong className="text-primary-dark">Tip:</strong> Patients
+              traveling from afar (Sailana, Bajna, Jaora, or Ratlam City) are
+              recommended to call or WhatsApp in advance to confirm queue
+              availability.
             </p>
           </div>
         </div>
@@ -83,15 +99,21 @@ const Timings = () => {
               {visitExpectations.map((item, idx) => (
                 <li
                   key={item.title}
-                  style={{ transitionDelay: expectVisible ? `${idx * 100}ms` : "0ms" }}
+                  style={{
+                    transitionDelay: expectVisible ? `${idx * 100}ms` : "0ms",
+                  }}
                   className={`flex gap-4 ${reveal(expectVisible)}`}
                 >
                   <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-primary text-xs font-semibold text-white">
                     {idx + 1}
                   </span>
                   <div>
-                    <h4 className="text-sm font-semibold text-primary-dark">{item.title}</h4>
-                    <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">{item.description}</p>
+                    <h4 className="text-sm font-semibold text-primary-dark">
+                      {item.title}
+                    </h4>
+                    <p className="mt-1 text-[13px] leading-relaxed text-ink-soft">
+                      {item.description}
+                    </p>
                   </div>
                 </li>
               ))}
@@ -101,14 +123,24 @@ const Timings = () => {
           <div
             ref={ctaRef}
             className={`flex flex-col items-start justify-between gap-4 rounded-2xl bg-primary-dark p-7 text-white sm:flex-row sm:items-center ${reveal(
-              ctaVisible
+              ctaVisible,
             )}`}
           >
             <div>
-              <p className="text-sm text-white/70">Need urgent medical advice?</p>
-              <p className="font-display text-lg font-semibold">Call {clinicInfo.doctorName} directly</p>
+              <p className="text-sm text-white/70">
+                Need urgent medical advice?
+              </p>
+              <p className="font-display text-lg font-semibold">
+                Call {clinicInfo.doctorName} directly
+              </p>
             </div>
-            <Button as="a" href={`tel:${clinicInfo.phoneRaw}`} variant="primary" icon={<PhoneIcon className="h-4 w-4" />} className="bg-white text-primary-dark hover:bg-white/90">
+            <Button
+              as="a"
+              href={`tel:${clinicInfo.phoneRaw}`}
+              variant="primary"
+              icon={<PhoneIcon className="h-4 w-4" />}
+              className="bg-white text-[#142c23] hover:bg-white/90"
+            >
               Call Now
             </Button>
           </div>

@@ -487,12 +487,7 @@ useLayoutEffect(() => {
           },
         });
 
-        /*
-          IMPORTANT:
-          DO NOT return mm.revert() from here.
-          
-          GSAP MatchMedia handles the callback lifecycle.
-        */
+
       },
     );
 
