@@ -7,6 +7,7 @@ const variants = {
     "bg-white text-primary-dark border border-border hover:border-primary hover:bg-primary/5",
   dark: "bg-primary-dark text-white hover:bg-[#0e1f18]",
   ghost: "bg-transparent text-primary-dark hover:bg-primary/5",
+  call: "bg-white text-[#142c23] hover:bg-white/90 shadow-soft hover:shadow-card",
 };
 
 /**

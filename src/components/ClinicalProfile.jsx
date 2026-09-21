@@ -92,14 +92,10 @@ const ClinicalProfile = () => {
               ))}
             </div>
 
-            <blockquote className="mt-5 rounded-xl bg-primary/5 p-5 text-sm italic leading-relaxed text-ink-soft">
-              "The highest ideal of cure is the rapid, gentle, and permanent restoration of health. In homeopathy,
-              we don't suppress symptoms; we stimulate the body's innate healing intelligence."
-              <footer className="mt-3 not-italic text-xs font-semibold text-primary-dark">— {clinicInfo.doctorName}</footer>
-            </blockquote>
+
 
             <div className="mt-6 flex items-center gap-3">
-              <span className="text-sm text-ink-soft">Connect with Dr. Manoj:</span>
+              <span className="text-sm text-ink-soft">Connect with <br /> Dr. Manoj:</span>
               <div className="flex items-center gap-2">
                 <a href={`https://wa.me/${clinicInfo.phoneRaw}`} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-transform duration-200 hover:scale-110 active:scale-95">
                   <WhatsAppIcon className="h-4 w-4" />

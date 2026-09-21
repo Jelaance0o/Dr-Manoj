@@ -137,9 +137,8 @@ const Timings = () => {
             <Button
               as="a"
               href={`tel:${clinicInfo.phoneRaw}`}
-              variant="primary"
+              variant="call"
               icon={<PhoneIcon className="h-4 w-4" />}
-              className="bg-white text-[#142c23] hover:bg-white/90"
             >
               Call Now
             </Button>
